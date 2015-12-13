@@ -1,4 +1,4 @@
-#errors {
+#errors .panel-body {
   max-height: 10em;
   overflow-y: scroll;
 }
