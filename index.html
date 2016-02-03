@@ -20,12 +20,16 @@
       <div id="generator-block" class="hidden-print">
         <form id="generator" class="form-inline">
           <div class="form-group">
-            <label for="deviceIMEI">Device IMEI</label>
-            <input type="text" id="deviceIMEI" class="form-control" maxlength="15" placeholder="" required></input>
+            <label for="deviceInput">Scan SKU or IMEI</label>
+            <input type="text" id="deviceInput" class="form-control" maxlength="15" placeholder="" required></input>
 
             <button type="submit" class="btn btn-success"><span class="glyphicon glyphicon-plus"></span></button>
           </div>
         </form>
+
+        <div id="detectedSKU">
+          <button type="button" class="btn btn-danger"><span id="detectedDeviceName"></span> <b>&times;</b></button>
+        </div>
 
         <div id="errors" class="center-block hidden-print panel panel-danger">
           <div class="panel-heading">
