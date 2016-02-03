@@ -2,3 +2,21 @@
   max-height: 10em;
   overflow-y: scroll;
 }
+
+#generator {
+  margin-bottom: 1em;
+}
+
+body {
+  min-width: 500px;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.device {
+  display: inline-block;
+  min-width: 50px;
+  min-height: 30px;
+  margin: 1em;
+}

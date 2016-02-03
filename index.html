@@ -14,12 +14,11 @@
   </head>
 
   <body>
-
     <div class="container-fluid center-block">
-      <h1>Device Barcode Generator <small>(aka the iPhone barcode generator)</small></h1>
+      <h1 class="hidden-print">Device Barcode Generator <small>(aka the iPhone barcode generator)</small></h1>
 
       <div id="generator-block" class="hidden-print">
-        <form id="generator">
+        <form id="generator" class="form-inline">
           <div class="form-group">
             <label for="deviceIMEI">Device IMEI</label>
             <input type="text" id="deviceIMEI" class="form-control" maxlength="15" placeholder="" required></input>
@@ -38,18 +37,9 @@
             </ul>
           </div>
         </div>
+      </div>
 
-        <table class="table" id="deviceTable">
-          <thead>
-            <tr>
-              <th>Barcode</th>
-              <th>Actions</th>
-            </tr>
-          </thead>
-
-          <tbody>
-          </tbody>
-        </table>
+      <div id="deviceList">
       </div>
     </div>
 
