@@ -10,6 +10,7 @@ var arrSKUs = {
   "888462501521": "iPhone 6s+ Silver 16GB",
   "888462501514": "iPhone 6s+ Space Gray 16GB",
 
+  "888462500401": "iPhone 6s Rose Gold 16GB",
   "888462500395": "iPhone 6s Gold 16GB",
   "888462500388": "iPhone 6s Silver 16GB",
   "888462500371": "iPhone 6s Space Gray 16GB",
@@ -17,7 +18,6 @@ var arrSKUs = {
   "888462500418": "iPhone 6s Space Gray 64GB",
   "888462500432": "iPhone 6s Gold 64GB"
 };
-var iErrorNum = 0;
 
 var strInProgressSKU = null;
 
@@ -26,13 +26,6 @@ $(function() {
 
   objDeviceInput.focus();
 });
-
-function addError(strError) {
-  $("#error-log").append('<li id="error' + iErrorNum + '">' + strError + '</li>')
-  $("#errors").removeClass("hidden");
-  $("#error" + iErrorNum).delay(5000).fadeOut('slow');
-  iErrorNum++;
-}
 
 function updateDetectedSKU() {
   var objDetectedSKU = $("#detectedSKU");
@@ -107,21 +100,3 @@ function addDevice(strSKU, strIMEI) {
 
   arrIMEI[strIMEI] = true;
 }
-
-$("#inputMode").change(function(e) {
-  var objTarget = $(this);
-  var objIMEIEntry = $("#deviceIMEI");
-  var objSKUEntry = $("#deviceSKU");
-
-  if(objTarget.val() == "SKU & IMEI") {
-    $("#skuInput").show();
-    objIMEIEntry.val("");
-    objSKUEntry.val("");
-  } else {
-    $("skuInput").hide();
-    objIMEIEntry.val("");
-    objSKUEntry.val("");
-  }
-
-  setProperFocus();
-});
