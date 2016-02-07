@@ -56,9 +56,14 @@ function processDeviceInputEntry() {
   var objDeviceInput = $("#deviceInput");
   var strDeviceText = objDeviceInput.val();
 
-  if (strDeviceText.length == 12 && arrSKUs[strDeviceText] != null) {
+  if (strDeviceText.length == 12) {
     console.log("detected sku " + strDeviceText);
-    strInProgressSKU = strDeviceText;
+
+    if(arrSKUs[strDeviceText] != null) {
+      strInProgressSKU = strDeviceText;
+      console.log("matched sku " + strDeviceText + " to " + arrSKUs[strDeviceText]);
+    }
+
     objDeviceInput.val("");
   } else if(strDeviceText.length == 15) {
     console.log("detected imei " + strDeviceText);
