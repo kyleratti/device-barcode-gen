@@ -4,11 +4,7 @@ var arrSKUs = {
   "885909971367": "iPhone 6+ Gold 16GB",
   "885909971350": "iPhone 6+ Silver 16GB",
 
-  "888462501583": "iPhone 6s+ Rose Gold 64GB",
-  "888462501576": "iPhone 6s+ Gold 64GB",
-
-  "888462501521": "iPhone 6s+ Silver 16GB",
-  "888462501514": "iPhone 6s+ Space Gray 16GB",
+  // begin iPhone 6s
 
   "888462500401": "iPhone 6s Rose Gold 16GB",
   "888462500395": "iPhone 6s Gold 16GB",
@@ -16,7 +12,14 @@ var arrSKUs = {
   "888462500371": "iPhone 6s Space Gray 16GB",
 
   "888462500418": "iPhone 6s Space Gray 64GB",
-  "888462500432": "iPhone 6s Gold 64GB"
+  "888462500432": "iPhone 6s Gold 64GB",
+
+  "888462501545":  "iPhone 6s+ Rose Gold 16GB",
+  "888462501521": "iPhone 6s+ Silver 16GB",
+  "888462501514": "iPhone 6s+ Space Gray 16GB",
+
+  "888462501583": "iPhone 6s+ Rose Gold 64GB",
+  "888462501576": "iPhone 6s+ Gold 64GB"
 };
 
 var strInProgressSKU = null;
