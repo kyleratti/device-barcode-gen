@@ -40,10 +40,12 @@ var arrSKUs = {
 var strInProgressSKU = null;
 
 $(function() {
-  var objDeviceInput = $("#deviceInput");
-
-  objDeviceInput.focus();
+  setInputFocus();
 });
+
+function setInputFocus() {
+  $("#deviceInput").focus();
+}
 
 function updateDetectedSKU() {
   var objDetectedSKU = $("#detectedSKU");
@@ -60,7 +62,7 @@ function updateDetectedSKU() {
 $("#detectedSKU").click(function() {
   strInProgressSKU = null;
   updateDetectedSKU();
-  $("#deviceInput").focus();
+  setInputFocus();
 });
 
 function processDeviceInputEntry() {
@@ -107,12 +109,14 @@ $("#generator").submit(function(event) {
   event.preventDefault();
 });
 
-$(document).on("click", ".device", function() {
+$(document).on("click", ".device", function(event) {
   var objDevice = $(this);
   var objIMEI = objDevice.data("imei");
   var objSKU = objDevice.data("sku");
 
   arrSKUs[objIMEI] = null;
+  event.preventDefault();
+  setInputFocus();
   objDevice.fadeOut(function() {
     objDevice.remove();
   });
