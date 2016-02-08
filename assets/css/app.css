@@ -1,17 +1,48 @@
+body {
+  text-align: center;
+  min-width: 500px;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 #errors .panel-body {
   max-height: 10em;
   overflow-y: scroll;
 }
 
-#generator {
-  margin-bottom: 1em;
+#header {
+  text-align: center;
 }
 
-body {
-  min-width: 500px;
-  max-width: 1000px;
-  margin-left: auto;
-  margin-right: auto;
+#icon {
+  font-size: 6em;
+}
+
+#generator-block {
+  max-width: 100%;
+  margin-bottom: 2em;
+}
+
+#generator, #errors {
+  padding: 1em;
+}
+
+#generator {
+  margin-bottom: 1em;
+  width: 60%;
+  max-width: 60%;
+  float: left;
+}
+
+#errors {
+  width: 40%;
+  max-width: 40%;
+  float: left;
+}
+
+#top {
+  margin: auto;
 }
 
 .device {

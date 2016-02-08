@@ -1,27 +1,40 @@
 var arrIMEI = {};
 var arrSKUs = {
-  "885909971343": "iPhone 6+ Space Gray 16GB",
-  "885909971367": "iPhone 6+ Gold 16GB",
-  "885909971350": "iPhone 6+ Silver 16GB",
+  // iPhone 5s
 
-  // begin iPhone 6s
+  // iPhone 6
 
-  "888462500401": "iPhone 6s Rose Gold 16GB",
-  "888462500395": "iPhone 6s Gold 16GB",
-  "888462500388": "iPhone 6s Silver 16GB",
-  "888462500371": "iPhone 6s Space Gray 16GB",
+  // iPhone 6+
+    // 16GB
+    "885909971367": "iPhone 6+ Gold 16GB",
+    "885909971350": "iPhone 6+ Silver 16GB",
+    "885909971343": "iPhone 6+ Space Gray 16GB",
 
-  "888462500418": "iPhone 6s Space Gray 64GB",
-  "888462500432": "iPhone 6s Gold 64GB",
+  // iPhone 6s
+    // 16GB
+    "888462500395": "iPhone 6s Gold 16GB",
+    "888462500401": "iPhone 6s Rose Gold 16GB",
+    "888462500388": "iPhone 6s Silver 16GB",
+    "888462500371": "iPhone 6s Space Gray 16GB",
 
-  "888462501545": "iPhone 6s+ Rose Gold 16GB",
-  "888462501521": "iPhone 6s+ Silver 16GB",
-  "888462501514": "iPhone 6s+ Space Gray 16GB",
+    // 64GB
+    "888462500432": "iPhone 6s Gold 64GB",
+    // iPhone 6s Rose Gold 64GB
+    // iPhone 6s Silver 64GB"
+    "888462500418": "iPhone 6s Space Gray 64GB",
 
-  "888462501552": "iPhone 6s+ Space Gray 64GB",
-  "888462501583": "iPhone 6s+ Rose Gold 64GB",
-  "888462501576": "iPhone 6s+ Gold 64GB",
-  "888462501569": "iPhone 6s+ Silver 64GB"
+  // iPhone 6s+
+    // 16GB
+    // iPhone 6s+ Gold 16GB
+    "888462501545": "iPhone 6s+ Rose Gold 16GB",
+    "888462501521": "iPhone 6s+ Silver 16GB",
+    "888462501514": "iPhone 6s+ Space Gray 16GB",
+
+    // 64GB
+    "888462501576": "iPhone 6s+ Gold 64GB",
+    "888462501583": "iPhone 6s+ Rose Gold 64GB",
+    "888462501569": "iPhone 6s+ Silver 64GB",
+    "888462501552": "iPhone 6s+ Space Gray 64GB"
 };
 
 var strInProgressSKU = null;
@@ -54,26 +67,31 @@ function processDeviceInputEntry() {
   var objDeviceInput = $("#deviceInput");
   var strDeviceText = objDeviceInput.val();
 
+  // SKU detected
   if (strDeviceText.length == 12) {
-    console.log("detected sku " + strDeviceText);
+    console.log("detected SKU " + strDeviceText);
 
     if(arrSKUs[strDeviceText] != null) {
       strInProgressSKU = strDeviceText;
-      console.log("matched sku " + strDeviceText + " to " + arrSKUs[strDeviceText]);
+      console.log("matched SKU " + strDeviceText + " to " + arrSKUs[strDeviceText]);
     }
 
     objDeviceInput.val("");
-  } else if(strDeviceText.length == 15) {
-    console.log("detected imei " + strDeviceText);
+  }
+  // IMEI detected
+  else if(strDeviceText.length == 15) {
+    console.log("detected IMEI " + strDeviceText);
     var objDeviceList = $("#deviceList");
-    objDeviceList.after('<div class="device" id="' + strDeviceText + '"></div>');
+    var objNewDevice = objDeviceList.after('<div class="device" id="' + strDeviceText + '" data-imei="' + strDeviceText + '"></div>');
+    objNewDevice.data("imei", strDeviceText);
 
     var objBarcode = $("#" + strDeviceText).barcode(strDeviceText, "code128", {
-      barHeight: 30
+      barHeight: 27
     });
 
     if(strInProgressSKU != null && strInProgressSKU != "") {
       objBarcode.prepend('<span class="deviceName">' + arrSKUs[strInProgressSKU] + '</span>');
+      objNewDevice.data("sku", strInProgressSKU);
     }
 
     arrIMEI[strDeviceText] = true;
@@ -87,6 +105,17 @@ function processDeviceInputEntry() {
 $("#generator").submit(function(event) {
   processDeviceInputEntry();
   event.preventDefault();
+});
+
+$(document).on("click", ".device", function() {
+  var objDevice = $(this);
+  var objIMEI = objDevice.data("imei");
+  var objSKU = objDevice.data("sku");
+
+  arrSKUs[objIMEI] = null;
+  objDevice.fadeOut(function() {
+    objDevice.remove();
+  });
 });
 
 function addDevice(strSKU, strIMEI) {

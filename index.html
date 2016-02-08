@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
 
-    <title>Device Barcode Generator (aka iPhone barcode generator because Apple)</title>
+    <title>IMEI Barcode Generator</title>
 
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous"/>
@@ -14,32 +14,34 @@
   </head>
 
   <body>
-    <div class="container-fluid center-block">
-      <h1 class="hidden-print">Device Barcode Generator <small>(aka the iPhone barcode generator)</small></h1>
+    <div class="container-fluid center-block" id="top">
+      <div class="page-header hidden-print" id="header">
+        <h1 id="icon"><span class="glyphicon glyphicon-barcode"></span></h1>
+        <h2>IMEI Barcode Generator</h2>
+      </div>
 
       <div id="generator-block" class="hidden-print">
-        <form id="generator" class="form-inline">
+        <form id="generator">
           <div class="form-group">
             <label for="deviceInput">Scan SKU or IMEI</label>
             <input type="text" id="deviceInput" class="form-control" maxlength="15" placeholder="" required></input>
-
-            <button type="submit" class="btn btn-success"><span class="glyphicon glyphicon-plus"></span></button>
           </div>
         </form>
 
-        <div id="detectedSKU">
-          <button type="button" class="btn btn-danger"><span id="detectedDeviceName"></span> <b>&times;</b></button>
+        <div id="errors">
+          <div class="center-block hidden-print panel panel-danger">
+            <div class="panel-heading">
+              <h3 class="panel-title">Error Log</h3>
+            </div>
+
+            <div class="panel-body">
+              <ul id="error-log"></ul>
+            </div>
+          </div>
         </div>
 
-        <div id="errors" class="center-block hidden-print panel panel-danger">
-          <div class="panel-heading">
-            <h3 class="panel-title">Error Log</h3>
-          </div>
-
-          <div class="panel-body">
-            <ul id="error-log">
-            </ul>
-          </div>
+        <div id="detectedSKU">
+          <button type="button" class="btn btn-danger"><span id="detectedDeviceName"></span> <b>&times;</b></button>
         </div>
       </div>
 
