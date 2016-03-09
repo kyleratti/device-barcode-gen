@@ -20,12 +20,12 @@ var arrSKUs = {
     // 64GB
     "888462500432": "iPhone 6s Gold 64GB",
     "888462500449": "iPhone 6s Rose Gold 64GB",
-    // iPhone 6s Silver 64GB"
+    "888462500425": "iPhone 6s Silver 64GB",
     "888462500418": "iPhone 6s Space Gray 64GB",
 
   // iPhone 6s+
     // 16GB
-    // iPhone 6s+ Gold 16GB
+    "888462501538": "iPhone 6s+ Gold 16GB",
     "888462501545": "iPhone 6s+ Rose Gold 16GB",
     "888462501521": "iPhone 6s+ Silver 16GB",
     "888462501514": "iPhone 6s+ Space Gray 16GB",
