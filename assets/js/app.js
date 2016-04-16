@@ -48,7 +48,12 @@ var arrSKUs = {
   // iPhone SE
     // 16GB
     "888462803892": "iPhone SE Gold 16GB",
-    "888462803908": "iPhone SE Rose Gold 16GB"
+    "888462803908": "iPhone SE Rose Gold 16GB",
+    
+  // iPad Pro
+    // 9.7 inch
+      // 32GB
+      "888462835268": "iPad Pro 9.7\" Rose Gold 32GB"
 };
 
 var strInProgressSKU = null;
