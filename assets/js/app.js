@@ -133,19 +133,6 @@ $("#generator").submit(function(event) {
   event.preventDefault();
 });
 
-$(document).on("click", ".device", function(event) {
-  var objDevice = $(this);
-  var objIMEI = objDevice.data("imei");
-  var objSKU = objDevice.data("sku");
-
-  arrSKUs[objIMEI] = null;
-  event.preventDefault();
-  setInputFocus();
-  objDevice.fadeOut(function() {
-    objDevice.remove();
-  });
-});
-
 function addDevice(strSKU, strIMEI) {
   var objDeviceList = $("#deviceList");
   var strSKU = $("#deviceSKU").val();
