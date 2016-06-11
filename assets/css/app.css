@@ -6,11 +6,6 @@ body {
   margin-right: auto;
 }
 
-#errors .panel-body {
-  max-height: 10em;
-  overflow-y: scroll;
-}
-
 #header {
   text-align: center;
 }
@@ -30,14 +25,8 @@ body {
 
 #generator {
   margin-bottom: 1em;
-  width: 60%;
-  max-width: 60%;
-  float: left;
-}
-
-#errors {
-  width: 40%;
-  max-width: 40%;
+  width: 100%;
+  max-width: 100%;
   float: left;
 }
 
