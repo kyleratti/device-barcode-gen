@@ -49,6 +49,7 @@ var arrSKUs = {
     // 16GB
     "888462803892": "iPhone SE Gold 16GB",
     "888462803908": "iPhone SE Rose Gold 16GB",
+    "888462734844": "iPhone SE Space Gray 16GB",
     
     // 64GB
     "888462803915": "iPhone SE Gold 64GB",
