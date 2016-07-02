@@ -45,9 +45,50 @@ body {
   display: none;
 }
 
+.deviceNameBox {
+  display: block;
+  margin-bottom: 0.2em;
+}
+
 .deviceName {
   display: block;
   text-align: center;
   color: gray;
   font-size: 0.8em;
+}
+
+.mem16 {
+  background-color: #d9534f;
+}
+
+.mem32 {
+  background-color: #5cb85c;
+}
+
+.mem64 {
+  background-color: #337ab7;
+}
+
+.mem128 {
+  background-color: #f0ad4e;
+}
+
+.colorGold {
+  background-color: #ffc94f;
+  color: black;
+}
+
+.colorRoseGold {
+  background-color: rgb(255, 151, 165);
+  color: black;
+}
+
+.colorSilver {
+  background-color: silver;
+  color: black;
+}
+
+.colorSpaceGray {
+  background-color: gray;
+  color: white;
 }
