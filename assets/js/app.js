@@ -86,9 +86,9 @@ function registerSKU(strSKU, strName, strColor, strMemSize) {
 
   { // iPhone 6+
     // 16GB
-    registerSKU("885909971367", "iPhone 6+", COLOR_GOLD, MEM_16);
-    registerSKU("885909971350", "iPhone 6+", COLOR_SILVER, MEM_16);
-    registerSKU("885909971343", "iPhone 6+", COLOR_SPACEGRAY, MEM_16);
+    registerSKU("885909971367", "iPhone 6 Plus", COLOR_GOLD, MEM_16);
+    registerSKU("885909971350", "iPhone 6 Plus", COLOR_SILVER, MEM_16);
+    registerSKU("885909971343", "iPhone 6 Plus", COLOR_SPACEGRAY, MEM_16);
   }
 
   { // iPhone 6s
@@ -107,16 +107,16 @@ function registerSKU(strSKU, strName, strColor, strMemSize) {
 
   { // iPhone 6s+
     // 16GB
-    registerSKU("888462501538", "iPhone 6s+", COLOR_GOLD, MEM_16);
-    registerSKU("888462501545", "iPhone 6s+", COLOR_ROSEGOLD, MEM_16);
-    registerSKU("888462501521", "iPhone 6s+", COLOR_SILVER, MEM_16);
-    registerSKU("888462501514", "iPhone 6s+", COLOR_SPACEGRAY, MEM_16);
+    registerSKU("888462501538", "iPhone 6s Plus", COLOR_GOLD, MEM_16);
+    registerSKU("888462501545", "iPhone 6s Plus", COLOR_ROSEGOLD, MEM_16);
+    registerSKU("888462501521", "iPhone 6s Plus", COLOR_SILVER, MEM_16);
+    registerSKU("888462501514", "iPhone 6s Plus", COLOR_SPACEGRAY, MEM_16);
 
     // 64GB
-    registerSKU("888462501576", "iPhone 6s+", COLOR_GOLD, MEM_64);
-    registerSKU("888462501583", "iPhone 6s+", COLOR_ROSEGOLD, MEM_64);
-    registerSKU("888462501569", "iPhone 6s+", COLOR_SILVER, MEM_64);
-    registerSKU("888462501552", "iPhone 6s+", COLOR_SPACEGRAY, MEM_64);
+    registerSKU("888462501576", "iPhone 6s Plus", COLOR_GOLD, MEM_64);
+    registerSKU("888462501583", "iPhone 6s Plus", COLOR_ROSEGOLD, MEM_64);
+    registerSKU("888462501569", "iPhone 6s Plus", COLOR_SILVER, MEM_64);
+    registerSKU("888462501552", "iPhone 6s Plus", COLOR_SPACEGRAY, MEM_64);
   }
 
   { // iPhone SE
