@@ -2,24 +2,30 @@ var COLOR_GOLD      = "colorGold";
 var COLOR_ROSEGOLD  = "colorRoseGold";
 var COLOR_SILVER    = "colorSilver";
 var COLOR_SPACEGRAY = "colorSpaceGray";
+var COLOR_BLACK     = "colorBlack";
+var COLOR_JETBLACK  = "colorJetBlack";
 
 var colorToDisplay = {
   [COLOR_GOLD]      : "Gold",
   [COLOR_ROSEGOLD]  : "Rose Gold",
   [COLOR_SILVER]    : "Silver",
-  [COLOR_SPACEGRAY] : "Space Gray"
+  [COLOR_SPACEGRAY] : "Space Gray",
+  [COLOR_BLACK]     : "Black",
+  [COLOR_JETBLACK]  : "Jet Black"
 };
 
 var MEM_16  = "mem16";
 var MEM_32  = "mem32";
 var MEM_64  = "mem64";
 var MEM_128 = "mem128";
+var MEM_256 = "mem256";
 
 var memToDisplay = {
   [MEM_16]  : "16GB",
   [MEM_32]  : "32GB",
   [MEM_64]  : "64GB",
-  [MEM_128] : "128GB"
+  [MEM_128] : "128GB",
+  [MEM_256] : "256GB"
 };
 
 var arrSKUs = {};
@@ -129,6 +135,13 @@ function registerSKU(strSKU, strName, strColor, strMemSize) {
     registerSKU("888462803915", "iPhone SE", COLOR_GOLD, MEM_64);
     registerSKU("888462803922", "iPhone SE", COLOR_ROSEGOLD, MEM_64);
     registerSKU("888462773102", "iPhone SE", COLOR_SPACEGRAY, MEM_64);
+  }
+  
+  { // iPhone 7
+    // 32GB
+    
+    // 128GB
+    registerSKU("190198071972", "iPhone 7", COLOR_BLACK, MEM_128);
   }
 
   { // iPad Pro
