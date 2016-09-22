@@ -82,6 +82,6 @@ StateManager.prototype.rebuild = function() {
 		var objDevice = this.getInventoryManager().getDevice(this.getDeviceInProgress());
 		objMatchedDeviceName.html(objDevice.getStyledName() + ' ' + objDevice.getStyledMemSize());
 	} else {
-		objMatchedDeviceName.text("s c a n");
+		objMatchedDeviceName.html('<span class="glyphicon glyphicon-barcode"></span>');
 	}
 }
