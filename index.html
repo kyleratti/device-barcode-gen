@@ -1,51 +1,58 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8"/>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+	<head>
+		<meta charset="utf-8"/>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1"/>
 
-    <title>Barcode Generator</title>
+		<title>Barcode Generator</title>
 
-    <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="./assets/css/bootstrap.min.css"/>
-    <link rel="stylesheet" href="./assets/css/app.css"/>
-    <link rel="icon" href="./favicon.ico"/>
-  </head>
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="./assets/css/bootstrap.min.css"/>
+		<link rel="stylesheet" href="./assets/css/app.css"/>
+		<link rel="icon" href="./favicon.ico"/>
+	</head>
 
-  <body>
-    <div class="container-fluid center-block" id="top">
-      <div class="page-header hidden-print" id="header">
-        <h1 id="icon"><span class="glyphicon glyphicon-barcode"></span></h1>
-        <h2>Barcode Generator</h2>
-        <p>
-          <small style="color:gray">please select <b>Background Graphics</b> on the left side of the print dialog settings (hidden under <i>More Settings</i>)</small>
-        </p>
-        <p>
-          <small>built with love using the <a href="http://barcode-coder.com/" target="_blank">barcode generator jQuery library</a>, <a href="http://getbootstrap.com/" target="_blank">Bootstrap</a>, and <a href="http://bootswatch.com" target="_blank">Bootswatch's Cosmo theme</a></small>
-        </p> 
-      </div>
+	<body>
+		<div class="container-fluid center-block" id="top">
+			<div class="page-header hidden-print" id="header">
+				<h1 id="icon"><span class="glyphicon glyphicon-barcode"></span></h1>
+				<h2>Barcode Generator</h2>
+				<p>
+					<small style="color:gray">please select <b>Background Graphics</b> on the left side of the print dialog settings (hidden under <i>More Settings</i>)</small>
+				</p>
+				<p>
+					<small>built with love using the <a href="http://barcode-coder.com/" target="_blank">barcode generator jQuery library</a>, <a href="http://getbootstrap.com/" target="_blank">Bootstrap</a>, and <a href="http://bootswatch.com" target="_blank">Bootswatch's Cosmo theme</a></small>
+				</p> 
+			</div>
 
-      <div id="generator-block" class="hidden-print">
-        <form id="generator">
-          <div class="form-group">
-            <label for="deviceInput">Scan the <span class="label label-primary">SKU</span> or <span class="label label-primary">UPC code</span>, then the <span class="label label-success">IMEI</span></label>
-            <input type="text" id="deviceInput" class="form-control" maxlength="15" placeholder="" required></input>
-          </div>
-        </form>
+			<div id="generator-block" class="hidden-print">
+				<form id="generator">
+					<div class="form-group">
+						<label for="deviceInput">Scan a <span id="lblSKU" class="label label-primary">SKU</span> or <span id="lblUPC" class="label label-primary">UPC code</span>, then an <span id="lblIMEI" class="label label-success">IMEI</span></label>
 
-        <div id="detectedSKU">
-          <button type="button" class="btn btn-danger"><span id="detectedDeviceName"></span> <b>&times;</b></button>
-        </div>
-      </div>
+						<div class="input-group">
+							<input type="text" id="txtScanInput" class="form-control" maxlength="15" placeholder="Scan something here" required></input>
 
-      <div id="deviceList">
-      </div>
-    </div>
+							<div id="lblMatchedDeviceName" class="input-group-addon"></div>
+						</div>
+					</div>
+				</form>
 
-    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.1.4.min.js"></script>
-    <script src="./assets/js/bootstrap.min.js"></script>
-    <script src="./assets/js/jquery-barcode.min.js"></script>
-    <script src="./assets/js/app.js"></script>
-  </body>
+				<div id="detectedSKU">
+					<button type="button" class="btn btn-danger"><span id="detectedDeviceName"></span> <b>&times;</b></button>
+				</div>
+			</div>
+
+			<div id="deviceList">
+			</div>
+		</div>
+
+		<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.1.4.min.js"></script>
+		<script src="./assets/js/bootstrap.min.js"></script>
+		<script src="./assets/js/jquery-barcode.min.js"></script>
+		<script src="./assets/js/statemanager.js"></script>
+		<script src="./assets/js/inventorymanager.js"></script>
+		<script src="./assets/js/app.js"></script>
+	</body>
 </html>
