@@ -1,7 +1,8 @@
 var TYPE_SKU			= 1;
 var TYPE_UPC			= 2;
 var TYPE_IMEI			= 3;
-var TYPE_UNKNOWN	= 4;
+var TYPE_SIM			= 4;
+var TYPE_UNKNOWN	= 5;
 
 var COLOR_GOLD			= "colorGold";
 var COLOR_ROSEGOLD	= "colorRoseGold";
@@ -41,6 +42,8 @@ function getInputType(strText) {
 			return TYPE_UPC;
 		else if(strText.length == 15)
 			return TYPE_IMEI;
+		else if(strText.length == 19 && strText.substr(18, 18) == "F")
+			return TYPE_SIM;
 	}
 
 	return TYPE_UNKNOWN;

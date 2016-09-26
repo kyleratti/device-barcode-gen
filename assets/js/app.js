@@ -126,13 +126,14 @@ function processInputEntry() {
 
 	var objInputType = getInputType(strInputText);
 
-	if(objInputType == TYPE_SKU || objInputType == TYPE_UPC) {
+	if(objInputType == TYPE_SKU || objInputType == TYPE_UPC)
 		processSKUInput(strInputText);
-	} else if(objInputType == TYPE_IMEI) {
+	else if(objInputType == TYPE_IMEI)
 		proccessIMEIInput(strInputText);
-	} else {
+	else if(objInputType == TYPE_SIM)
+		alert("Whoops, you accidentally scanned a SIM card");
+	else
 		alert("Unknown data type submitted. Please try again (or if you're not doing anything wrong, report this error)");
-	}
 
 	txtScanInput.val("");
 }
