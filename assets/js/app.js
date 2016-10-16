@@ -147,7 +147,7 @@ $("#generator").submit(function(objEvent) {
 $(function() {
 	var objDeviceStatus = $("#deviceStatus");
 	var iNumDevices = objDeviceStatus.getNumDevices();
-	objDeviceStatus.html('currently supporting <span class="label label-danger">' + iNumDevices + '</span> device' + (iNumDevices != 1 ? 's')).show();
+	objDeviceStatus.html('currently supporting <span class="label label-danger">' + iNumDevices + '</span> device' + (iNumDevices == 1 ? '' : 's')).show();
 	app.rebuild();
 	setInputFocus();
 });
