@@ -15,6 +15,10 @@ InventoryManager.prototype.getDevice = function(strIdentifier) {
 	return this.m_arrDevices[strIdentifier];
 }
 
+InventoryManager.prototype.getNumDevices = function() {
+	return Object.keys(this.m_arrDevices).length;
+}
+
 function Device(strIdentifier, strName, strColor, strMemSize) {
 	this.m_strIdentifier			= strIdentifier;
 	this.m_objIdentifierType	= getInputType(strIdentifier);
