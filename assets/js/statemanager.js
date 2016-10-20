@@ -83,7 +83,15 @@ StateManager.prototype.rebuild = function() {
 
 	if(this.isDeviceInProgress()) {
 		var objDevice = this.getInventoryManager().getDevice(this.getDeviceInProgress());
-		objMatchedDeviceName.html(objDevice.getStyledName() + ' ' + objDevice.getStyledMemSize());
+
+    if(objDevice == null) {
+      console.error("No device found", this.getDeviceInProgress(), this.getInventoryManager(), objDevice);
+      alert("Internal error; please check console for details. Attempting recovery (but no promises!)");
+      objMatchedDeviceName.html('');
+    }
+    else {
+      objMatchedDeviceName.html(objDevice.getStyledName() + ' ' + objDevice.getStyledMemSize());
+    }
 	} else {
 		objMatchedDeviceName.html('<span class="glyphicon glyphicon-barcode"></span>');
 	}
