@@ -83,6 +83,11 @@ function registerDevice(strIdentifier, strName, strColor, strMemSize) {
 			// 32GB
 			registerDevice("888462835268", "iPad Pro 9.7\"", COLOR_ROSEGOLD, MEM_32);
 	}
+
+  { // Note7
+    registerDevice("v1", "Note7 V1", COLOR_RED, MEM_64);
+    registerDevice("v2", "Note7 V2", COLOR_GREEN, MEM_64);
+  }
 }
 
 function setInputFocus() {
@@ -97,6 +102,16 @@ function processSKUInput(strIdentifier) {
 
 	app.setDeviceInProgress(strIdentifier);
 	app.rebuild();
+}
+
+function processNote7Input(strIdentifier) {
+  if(getInputType(strIdentifier) != TYPE_NOTE7) {
+    alert("attempted to process a Note7 that wasn't a Note7. How?");
+    return;
+  }
+
+  app.setDeviceInProgress(strIdentifier);
+  app.rebuild();
 }
 
 function proccessIMEIInput(strIMEI) {
@@ -130,7 +145,9 @@ function processInputEntry() {
 
 	var objInputType = getInputType(strInputText);
 
-	if(objInputType == TYPE_SKU || objInputType == TYPE_UPC)
+	if(objInputType == TYPE_NOTE7)
+    processNote7Input(strInputText);
+  else if(objInputType == TYPE_SKU || objInputType == TYPE_UPC)
 		processSKUInput(strInputText);
 	else if(objInputType == TYPE_IMEI)
 		proccessIMEIInput(strInputText);

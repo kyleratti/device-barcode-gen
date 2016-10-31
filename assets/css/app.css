@@ -90,3 +90,13 @@ body {
   background-color: #585757;
   color: white;
 }
+
+.colorRed {
+  background-color: red;
+  color: white;
+}
+
+.colorGreen {
+  background-color: lime;
+  color: black;
+}
