@@ -40,18 +40,16 @@ var memToDisplay = {
 };
 
 function getInputType(strText) {
-	//if($.isNumeric(strText)) {
-    if(strText.length == 2 && (strText.toLowerCase() == "v1" || strText.toLowerCase() == "v2"))
-      return TYPE_NOTE7;
-		else if(strText.length == 8)
-			return TYPE_SKU;
-		else if(strText.length == 12)
-			return TYPE_UPC;
-		else if(strText.length == 15)
-			return TYPE_IMEI;
-		else if(strText.length == 19 && strText.substr(18, 18) == "F")
-			return TYPE_SIM;
-	//}
+  if(strText.length == 2 && (strText.toLowerCase() == "v1" || strText.toLowerCase() == "v2"))
+    return TYPE_NOTE7;
+  else if(strText.length == 8)
+    return TYPE_SKU;
+  else if(strText.length == 12)
+    return TYPE_UPC;
+  else if(strText.length == 15)
+    return TYPE_IMEI;
+  else if(strText.length == 19 && strText.substr(18, 18) == "F")
+    return TYPE_SIM;
 
 	return TYPE_UNKNOWN;
 }
