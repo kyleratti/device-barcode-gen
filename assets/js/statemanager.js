@@ -41,7 +41,7 @@ var memToDisplay = {
 
 function getInputType(strText) {
 	//if($.isNumeric(strText)) {
-    if(strText.length == 2 && (strText == "v1" || strText == "v2"))
+    if(strText.length == 2 && (strText.toLowerCase() == "v1" || strText.toLowerCase() == "v2"))
       return TYPE_NOTE7;
 		else if(strText.length == 8)
 			return TYPE_SKU;
