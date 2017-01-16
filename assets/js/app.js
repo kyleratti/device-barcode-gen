@@ -54,7 +54,7 @@ function registerDevice(strIdentifier, strName, strColor, strMemSize) {
 		
 		// 32GB
 		registerDevice("190198062277", "iPhone 6s Plus", COLOR_SPACEGRAY, MEM_32);
-		registerDevice("190198062307", "iPhone 6s Plus", COLOR_ROSGOLD, MEM_32);
+		registerDevice("190198062307", "iPhone 6s Plus", COLOR_ROSEGOLD, MEM_32);
 
 		// 64GB
 		registerDevice("888462501576", "iPhone 6s Plus", COLOR_GOLD, MEM_64);
