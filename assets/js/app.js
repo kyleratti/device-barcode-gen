@@ -68,6 +68,9 @@ function registerDevice(strIdentifier, strName, strColor, strMemSize) {
 		registerDevice("888462803892", "iPhone SE", COLOR_GOLD, MEM_16);
 		registerDevice("888462803908", "iPhone SE", COLOR_ROSEGOLD, MEM_16);
 		registerDevice("888462734844", "iPhone SE", COLOR_SPACEGRAY, MEM_16);
+
+		// 32GB
+		registerDevice("190198296535", "iPhone SE", COLOR_SPACEGRAY, MEM_32);
 		
 		// 64GB
 		registerDevice("888462803915", "iPhone SE", COLOR_GOLD, MEM_64);
