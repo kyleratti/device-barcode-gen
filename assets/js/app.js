@@ -105,6 +105,7 @@ function registerDevice(strIdentifier, strName, strColor, strMemSize) {
 	
 	{ // iPhone 8
 		// 64GB
+		registerDevice("190198451965", "iPhone 8", COLOR_SILVER, MEM_64);
 		registerDevice("190198451958", "iPhone 8", COLOR_SPACEGRAY, MEM_64);
 		registerDevice("190198451972", "iPhone 8", COLOR_GOLD, MEM_64);
 	}
