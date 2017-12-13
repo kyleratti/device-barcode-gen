@@ -117,6 +117,11 @@ function registerDevice(strIdentifier, strName, strColor, strMemSize) {
 		registerDevice("190198456175", "iPhone 8 Plus", COLOR_GOLD, MEM_64);
 	}
 
+	{ // iPhone X
+		// 64GB
+		registerDevice("190198459152", "iPhone X", COLOR_SPACEGRAY, MEM_64);
+	}
+
 	{ // iPad Pro
 		// 9.7 inch
 			// 32GB
