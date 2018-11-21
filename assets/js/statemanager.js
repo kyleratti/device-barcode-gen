@@ -11,6 +11,7 @@ var COLOR_SILVER		= "colorSilver";
 var COLOR_SPACEGRAY	= "colorSpaceGray";
 var COLOR_BLACK			= "colorBlack";
 var COLOR_JETBLACK	= "colorJetBlack";
+var COLOR_WHITE		= "colorWhite";
 var COLOR_RED       = "colorRed";
 var COLOR_GREEN     = "colorGreen";
 
