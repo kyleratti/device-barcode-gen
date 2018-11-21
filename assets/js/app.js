@@ -122,6 +122,30 @@ function registerDevice(strIdentifier, strName, strColor, strMemSize) {
 		registerDevice("190198459169", "iPhone X", COLOR_SILVER, MEM_64);
 		registerDevice("190198459152", "iPhone X", COLOR_SPACEGRAY, MEM_64);
 	}
+	
+	{ // iPhone Xr
+		// 64GB
+		registerDevice("190198778024", "iPhone Xr", COLOR_BLACK, MEM_64);
+		registerDevice("190198778031", "iPhone Xr", COLOR_WHITE, MEM_64);
+		registerDevice("190198778048", "iPhone Xr", COLOR_RED, MEM_64);
+		
+		// 128GB
+		registerDevice("190198778086", "iPhone Xr", COLOR_BLACK, MEM_128);
+	}
+	
+	{ // iPhone Xs
+		// 64GB
+		registerDevice("1901987931", "iPhone Xs", COLOR_GOLD, MEM_64);
+		registerDevice("19019773898", "iPhone Xs", COLOR_SPACEGRAY, MEM_64);
+		
+		// 256GB
+		registerDevice("19019879392", "iPhone Xs", COLOR_SPACEGRAY, MEM_256);
+	}
+	
+	{ // iPhone Xs Max
+		// 64GB
+		registerDevice("19019878638", "iPhone Xs Max", COLOR_SPACEGRAY, MEM_64);
+	}
 
 	{ // iPad Pro
 		// 9.7 inch
