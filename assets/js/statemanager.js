@@ -27,6 +27,7 @@ var colorToDisplay = {
 	[COLOR_SPACEGRAY]	: "Space Gray",
 	[COLOR_BLACK]			: "Black",
 	[COLOR_JETBLACK]	: "Jet Black",
+	[COLOR_WHITE]		: "White",
   [COLOR_RED]       : "V1",
   [COLOR_GREEN]     : "V2"
 };
