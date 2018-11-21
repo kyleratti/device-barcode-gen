@@ -81,6 +81,11 @@ body {
   color: black;
 }
 
+.colorWhite {
+  background-color: white;
+  color: black;
+}
+
 .colorSilver {
   background-color: silver;
   color: white;
