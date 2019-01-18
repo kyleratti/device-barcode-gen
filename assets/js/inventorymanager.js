@@ -60,9 +60,9 @@ Device.prototype.getDisplayMemorySize = function() {
 }
 
 Device.prototype.getStyledName = function() {
-	return '<span class="label label-default ' + this.getColor() + '">' + this.getName() + '</span>';
+	return '<span class="badge badge-default ' + this.getColor() + '">' + this.getName() + '</span>';
 }
 
 Device.prototype.getStyledMemSize = function() {
-	return '<span class="label label-default ' + this.getMemorySize() + '">' + this.getDisplayMemorySize() + '</span>';
+	return '<span class="badge badge-default ' + this.getMemorySize() + '">' + this.getDisplayMemorySize() + '</span>';
 }
