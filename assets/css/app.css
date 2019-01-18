@@ -105,3 +105,8 @@ body {
   background-color: lime;
   color: black;
 }
+
+.colorBlack {
+  background-color: black;
+  color: white;
+}
