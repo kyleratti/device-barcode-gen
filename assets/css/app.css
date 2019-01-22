@@ -57,7 +57,9 @@ body {
   font-size: 0.8em;
 }
 
-.mem16 {}
+.mem16 {
+  background-color: #9954BB;
+}
 
 .mem32 {
   background-color: #5cb85c;
