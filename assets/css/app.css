@@ -111,3 +111,8 @@ body {
   background-color: black;
   color: white;
 }
+
+.colorJetBlack {
+  background-color: black;
+  color: gray;
+}
